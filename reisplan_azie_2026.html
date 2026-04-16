@@ -14,129 +14,181 @@ body { font-family: sans-serif; background: transparent; padding: 8px; }
 .badge2 { font-size: 11px; padding: 2px 8px; border-radius: 20px; background: #e0f5e0; color: #226622; }
 .body { padding: 10px 14px; border-top: 1px solid #e0e0e0; display: none; }
 .body.open { display: block; }
-.act { padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+.city-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.split-col h3 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 2px solid #f0f0f0; }
+.split-col h3 span { font-size: 15px; margin-right: 4px; }
+.act { padding: 5px 0; border-bottom: 1px solid #f5f5f5; }
 .act:last-child { border-bottom: none; }
-.act-title { font-size: 13px; color: #222; margin-bottom: 4px; }
-.links { display: flex; flex-wrap: wrap; gap: 5px; }
-.lnk { font-size: 11px; padding: 2px 8px; border-radius: 5px; border: 1px solid #ccd; color: #1155cc; background: #f0f4ff; text-decoration: none; display: inline-block; }
+.act-title { font-size: 12px; color: #222; margin-bottom: 3px; }
+.links { display: flex; flex-wrap: wrap; gap: 4px; }
+.lnk { font-size: 10px; padding: 2px 7px; border-radius: 5px; border: 1px solid #ccd; color: #1155cc; background: #f0f4ff; text-decoration: none; display: inline-block; }
 .lnk:hover { background: #dce6ff; }
-.note { font-size: 12px; color: #888; font-style: italic; margin-bottom: 8px; }
+.note { font-size: 11px; color: #888; font-style: italic; margin-bottom: 8px; }
 .chev { font-size: 12px; color: #999; transition: transform 0.2s; display: inline-block; }
 .chev.open { transform: rotate(90deg); }
+@media (max-width: 500px) { .city-split { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
+<!-- SEOUL -->
 <div class="card">
   <div class="header" onclick="tog('seoul')">
-    <span>🇰🇷</span>
-    <span class="city-name">Seoul</span>
-    <span class="badge">7 dagen</span>
-    <span class="badge2">Vlucht</span>
+    <span>🇰🇷</span><span class="city-name">Seoul</span>
+    <span class="badge">7 dagen</span><span class="badge2">Vlucht</span>
     <span class="chev" id="c-seoul">▶</span>
   </div>
   <div class="body" id="seoul">
     <p class="note">Eventueel verdelen over andere steden</p>
-    <div class="act"><div class="act-title">DMZ / grens met Noord-Korea</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/Q2v7X8cP9bKmZ3Vn7" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.dmztours.com/" target="_blank">↗ Tours boeken</a></div></div>
-    <div class="act"><div class="act-title">Gangnam-wijk</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/YeEKLmD2SeBJvHn18" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Hongdae nightlife</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/8RUKEXKBh5JMhAv26" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Pokpo café (waterval café)</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/pokpo+cafe+seoul" target="_blank">↗ Zoeken op Maps</a></div></div>
-    <div class="act"><div class="act-title">Namsan Tower & slotjes</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/KTZCxPkyFGK17F4u9" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.nseoultower.com/eng/" target="_blank">↗ Website</a></div></div>
-    <div class="act"><div class="act-title">Han River picknick</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/uqZ7qJX8xQyVYXcZ8" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Jjimjilbang (Koreaanse sauna 24u)</div><div class="links"><a class="lnk" href="https://www.dragonhillspa.co.kr/eng/" target="_blank">↗ Dragon Hill Spa</a><a class="lnk" href="https://maps.app.goo.gl/b3NjhEpMBMjZ1Gmu9" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Bukchon Hanok Village</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/kFiXZjpQDBfkH3Ux7" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Lotte World pretpark</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/v3xnTxeQHWJAnm8n7" target="_blank">↗ Google Maps</a><a class="lnk" href="https://adventure.lotteworld.com/eng/" target="_blank">↗ Website</a></div></div>
+    <div class="act"><div class="act-title">DMZ / grens met Noord-Korea</div><div class="links"><a class="lnk" href="https://www.dmztours.com/" target="_blank">↗ dmztours.com</a><a class="lnk" href="https://www.viator.com/Seoul-attractions/DMZ/d973-a8969" target="_blank">↗ Viator</a></div></div>
+    <div class="act"><div class="act-title">Gangnam-wijk verkennen</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Gangnam+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Hongdae nightlife</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Hongdae+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Pokpo café (waterval café)</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/pokpo+cafe+seoul" target="_blank">↗ Zoeken</a></div></div>
+    <div class="act"><div class="act-title">N Seoul Tower (Namsan)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=N+Seoul+Tower" target="_blank">↗ Maps</a><a class="lnk" href="https://www.nseoultower.com/eng/" target="_blank">↗ Website</a></div></div>
+    <div class="act"><div class="act-title">Han River picknick</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Han+River+Park+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Jjimjilbang – Dragon Hill Spa (24u sauna)</div><div class="links"><a class="lnk" href="https://www.dragonhillspa.co.kr/eng/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Dragon+Hill+Spa+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Bukchon Hanok Village</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Bukchon+Hanok+Village+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Lotte World pretpark</div><div class="links"><a class="lnk" href="https://adventure.lotteworld.com/eng/" target="_blank">↗ Tickets</a><a class="lnk" href="https://maps.google.com/?q=Lotte+World+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Itaewon & Haebangchon (internationale bars, diverse nightlife)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Itaewon+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Noryangjin vismarkt op middernacht (vers sashimi eten ter plekke)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Noryangjin+Fish+Market+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Gyeongbokgung Palace + huurkostuum hanbok</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Gyeongbokgung+Palace+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Escape room (Seoul heeft wereldklasse escape rooms)</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/escape+room+Seoul+Hongdae" target="_blank">↗ Zoeken</a></div></div>
+    <div class="act act"><div class="act-title">Insadong – antiekmarkt, straateten, kunstgaleries</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Insadong+Seoul" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Myeongdong – street food + skincare winkels</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Myeongdong+Seoul" target="_blank">↗ Maps</a></div></div>
   </div>
 </div>
 
+<!-- BUSAN -->
 <div class="card">
   <div class="header" onclick="tog('busan')">
-    <span>🇰🇷</span>
-    <span class="city-name">Busan</span>
-    <span class="badge">3 dagen</span>
-    <span class="badge2">Trein</span>
+    <span>🇰🇷</span><span class="city-name">Busan</span>
+    <span class="badge">3 dagen</span><span class="badge2">Trein</span>
     <span class="chev" id="c-busan">▶</span>
   </div>
   <div class="body" id="busan">
-    <div class="act"><div class="act-title">Korean BBQ</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/korean+bbq+busan" target="_blank">↗ Zoeken op Maps</a></div></div>
-    <div class="act"><div class="act-title">Busan Sky Capsule (treintje langs kust)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/gn4YxFj98Pq6XaV67" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.haundaeskycapsule.com/" target="_blank">↗ Tickets</a></div></div>
-    <div class="act"><div class="act-title">Gamcheon Culture Village</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/BmEzGHPxKj3Z2Nv46" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Haedong Yonggungsa tempel (aan zee)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/BuRs4v1Qm3VivmqY6" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Haeundae strand</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/3UhX6gkqVBMuD8KG6" target="_blank">↗ Google Maps</a></div></div>
+    <div class="act"><div class="act-title">Korean BBQ</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/korean+bbq+busan" target="_blank">↗ Zoeken</a></div></div>
+    <div class="act"><div class="act-title">Busan Sky Capsule</div><div class="links"><a class="lnk" href="https://www.klook.com/en-US/activity/133293-haeundae-blueline-park-ticket-in-busan/" target="_blank">↗ Klook</a><a class="lnk" href="https://maps.google.com/?q=Haeundae+Blueline+Park+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Gamcheon Culture Village</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Gamcheon+Culture+Village+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Haedong Yonggungsa tempel (aan zee)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Haedong+Yonggungsa+Temple+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Haeundae strand</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Haeundae+Beach+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Jagalchi vismarkt – grootste vismarkt van Korea</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Jagalchi+Market+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Gwangalli strand + Gwangan Bridge bij nacht (verlicht)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Gwangalli+Beach+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Beomeosa tempel (boeddhistische bergtempel buiten de stad)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Beomeosa+Temple+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Spa Land Centum City (luxe onsen in een winkelcentrum)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Spa+Land+Centum+City+Busan" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Seomyeon – beste uitgaanswijk van Busan</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Seomyeon+Busan" target="_blank">↗ Maps</a></div></div>
   </div>
 </div>
 
+<!-- FUKUOKA -->
 <div class="card">
   <div class="header" onclick="tog('fukuoka')">
-    <span>🇯🇵</span>
-    <span class="city-name">Fukuoka</span>
-    <span class="badge">3 dagen</span>
-    <span class="badge2">Ferry</span>
+    <span>🇯🇵</span><span class="city-name">Fukuoka</span>
+    <span class="badge">3 dagen</span><span class="badge2">Ferry</span>
     <span class="chev" id="c-fukuoka">▶</span>
   </div>
   <div class="body" id="fukuoka">
-    <p class="note">Capsule hotel bij Huis ten Bosch?</p>
-    <div class="act"><div class="act-title">Huis ten Bosch pretpark</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/TiM5dLVqHhvJ4bPV9" target="_blank">↗ Google Maps</a><a class="lnk" href="https://huistenbosch.co.jp/en/" target="_blank">↗ Website</a></div></div>
-    <div class="act"><div class="act-title">Yatai street food stands</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/U5k8cVpGnWEz9N3p8" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Dazaifu Tenman-gu schrijn</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/pK2v4hxcMjbJHZVx5" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.dazaifutenmangu.or.jp/en/" target="_blank">↗ Website</a></div></div>
-    <div class="act"><div class="act-title">Canal City Hakata</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/gGJX7RkY7GBsxWEW7" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.canalcity.co.jp/en/" target="_blank">↗ Website</a></div></div>
+    <p class="note">Capsule hotel bij Huis ten Bosch? (ligt in Sasebo, ~2u van Fukuoka)</p>
+    <div class="act"><div class="act-title">Huis ten Bosch pretpark</div><div class="links"><a class="lnk" href="https://huistenbosch.co.jp/en/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Huis+Ten+Bosch+Nagasaki" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Yatai street food stands (langs de rivier)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Nakasu+Yatai+Fukuoka" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Dazaifu Tenman-gu schrijn</div><div class="links"><a class="lnk" href="https://www.dazaifutenmangu.or.jp/en/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Dazaifu+Tenmangu" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Canal City Hakata</div><div class="links"><a class="lnk" href="https://www.canalcity.co.jp/en/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Canal+City+Hakata+Fukuoka" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Ferry boeken Busan → Fukuoka</div><div class="links"><a class="lnk" href="https://www.jrbeetle.com/en/" target="_blank">↗ JR Beetle</a><a class="lnk" href="https://www.camellia-line.co.jp/en/" target="_blank">↗ Camellia Line</a></div></div>
+    <div class="act act"><div class="act-title">Hakata ramen – Ichiran of Ippudo (originele Hakata stijl, thuis van tonkotsu)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Ichiran+Ramen+Fukuoka" target="_blank">↗ Ichiran</a><a class="lnk" href="https://maps.google.com/?q=Ippudo+Ramen+Fukuoka" target="_blank">↗ Ippudo</a></div></div>
+    <div class="act act"><div class="act-title">Ohori Park – groot stadspark met Japanse tuin en theeceremonie</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Ohori+Park+Fukuoka" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Fukuoka Tower bij zonsondergang</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Fukuoka+Tower" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">TeamLab Forest Fukuoka (kleinere versie van TeamLab, minder druk)</div><div class="links"><a class="lnk" href="https://www.teamlab.art/e/forest/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=teamLab+Forest+Fukuoka" target="_blank">↗ Maps</a></div></div>
   </div>
 </div>
 
+<!-- KAGOSHIMA -->
 <div class="card">
   <div class="header" onclick="tog('kagoshima')">
-    <span>🇯🇵</span>
-    <span class="city-name">Kagoshima</span>
-    <span class="badge">3 dagen</span>
-    <span class="badge2">Trein</span>
+    <span>🇯🇵</span><span class="city-name">Kagoshima</span>
+    <span class="badge">3 dagen</span><span class="badge2">Trein</span>
     <span class="chev" id="c-kagoshima">▶</span>
   </div>
   <div class="body" id="kagoshima">
-    <div class="act"><div class="act-title">Sakurajima vulkaan</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/hj2eWxEpkC3KFZN67" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.kagoshima-kankou.com/en/attractions/sakurajima/" target="_blank">↗ Info</a></div></div>
-    <div class="act"><div class="act-title">Ibusuki zandbaden (vulkanisch zand)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/qFe1JcNW5ynXDLHo9" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.ibusuki.or.jp/en/onsen/sunamushi/" target="_blank">↗ Website</a></div></div>
-    <div class="act"><div class="act-title">Ferry naar Yakushima (oerwoud)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/1bBQ7msTjvfmk26y9" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.yakushima.or.jp/" target="_blank">↗ Toeristinfo</a></div></div>
-    <div class="act"><div class="act-title">Shochu distillerie tour</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/shochu+distillery+kagoshima" target="_blank">↗ Zoeken op Maps</a></div></div>
+    <div class="act"><div class="act-title">Sakurajima vulkaan</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Sakurajima+Kagoshima" target="_blank">↗ Maps</a><a class="lnk" href="https://www.kagoshima-kankou.com/en/attractions/sakurajima/" target="_blank">↗ Info</a></div></div>
+    <div class="act"><div class="act-title">Ibusuki zandbaden</div><div class="links"><a class="lnk" href="https://www.ibusuki.or.jp/en/onsen/sunamushi/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Ibusuki+Sunamushi+Onsen" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Ferry naar Yakushima (oerwoud)</div><div class="links"><a class="lnk" href="https://www.yakushima.or.jp/" target="_blank">↗ Info</a><a class="lnk" href="https://maps.google.com/?q=Yakushima+Island+Japan" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Shochu distillerie tour</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/shochu+distillery+kagoshima" target="_blank">↗ Zoeken</a></div></div>
+    <div class="act act"><div class="act-title">Sengan-en tuin – villa met vulkaanuitzicht, UNESCO-kandidaat</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Sengan-en+Garden+Kagoshima" target="_blank">↗ Maps</a><a class="lnk" href="https://www.senganen.jp/en/" target="_blank">↗ Website</a></div></div>
+    <div class="act act"><div class="act-title">Tenmonkan – uitgaanswijk van Kagoshima, lokale izakayas</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Tenmonkan+Kagoshima" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Kirishima onsen – bergonsen met vulkaanlandschap</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Kirishima+Onsen+Kagoshima" target="_blank">↗ Maps</a></div></div>
   </div>
 </div>
 
+<!-- OKINAWA -->
 <div class="card">
   <div class="header" onclick="tog('okinawa')">
-    <span>🇯🇵</span>
-    <span class="city-name">Okinawa</span>
-    <span class="badge">10 dagen</span>
-    <span class="badge2">Vlucht</span>
+    <span>🇯🇵</span><span class="city-name">Okinawa</span>
+    <span class="badge">10 dagen</span><span class="badge2">Vlucht</span>
     <span class="chev" id="c-okinawa">▶</span>
   </div>
   <div class="body" id="okinawa">
-    <div class="act"><div class="act-title">Auto huren</div><div class="links"><a class="lnk" href="https://rental.timescar.jp/en/" target="_blank">↗ Times Car</a><a class="lnk" href="https://www.nipponrentacar.co.jp/english/" target="_blank">↗ Nippon Rent-A-Car</a></div></div>
-    <div class="act"><div class="act-title">Duiken (Blue Cave, Maeda Cape)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/mD4rJGqmcH9TSPKP9" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.google.com/maps/search/diving+school+okinawa" target="_blank">↗ Duikscholen</a></div></div>
-    <div class="act"><div class="act-title">Tokashiki Island</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/R3TA2NE1nCJFYQWp8" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.vill.tokashiki.okinawa.jp/english" target="_blank">↗ Ferry info</a></div></div>
-    <div class="act"><div class="act-title">Churaumi Aquarium</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/oU2RV5E4zPJ5qCr49" target="_blank">↗ Google Maps</a><a class="lnk" href="https://churaumi.okinawa/en/" target="_blank">↗ Website</a></div></div>
-    <div class="act"><div class="act-title">Cape Manzamo bij zonsondergang</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/qBJtPwmqMZ7VHj3G9" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Kayak bij Iriomote mangrovebos</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/GVW6EqZUFJPsxiWj9" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Naha Kokusai-dori street food</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/zsCMAdHrGJvkXbBU6" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Katsuren Kasteel (UNESCO)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/DpvJHo8TKXnRqMGW7" target="_blank">↗ Google Maps</a></div></div>
+    <div class="act"><div class="act-title">Auto huren</div><div class="links"><a class="lnk" href="https://rental.timescar.jp/en/" target="_blank">↗ Times Car</a><a class="lnk" href="https://www.nipponrentacar.co.jp/english/" target="_blank">↗ Nippon</a></div></div>
+    <div class="act"><div class="act-title">Duiken – Blue Cave (Maeda Cape)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Cape+Maeda+Okinawa+diving" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Tokashiki Island</div><div class="links"><a class="lnk" href="https://www.vill.tokashiki.okinawa.jp/english" target="_blank">↗ Ferry info</a><a class="lnk" href="https://maps.google.com/?q=Tokashiki+Island+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Churaumi Aquarium</div><div class="links"><a class="lnk" href="https://churaumi.okinawa/en/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Okinawa+Churaumi+Aquarium" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Cape Manzamo bij zonsondergang</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Cape+Manzamo+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Kayak bij Iriomote mangrovebos</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Iriomote+Island+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Naha Kokusai-dori street food</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Kokusai+Dori+Naha+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act"><div class="act-title">Katsuren Kasteel (UNESCO)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Katsuren+Castle+Ruins+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Shurijo Castle – iconisch Ryukyu kasteel in Naha</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Shuri+Castle+Naha+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Zamami Island – rustigere dagtrip, kristalhelder water</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Zamami+Island+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Okinawa World – druipsteengrotten + habu-slangen show + Ryukyu Village</div><div class="links"><a class="lnk" href="https://www.gyokusendo.co.jp/okinawaworld/en/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Okinawa+World" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Nakamura House – 300 jaar oud Ryukyu boerderijhuis, nu museum</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Nakamura+House+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">Snorkelen bij Sunabe Seawall – makkelijk bereikbaar, vol met koraal en vissen</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Sunabe+Seawall+Okinawa" target="_blank">↗ Maps</a></div></div>
+    <div class="act act"><div class="act-title">American Village (Chatan) – neon, street food, retro Amerikaanse sfeer</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=American+Village+Chatan+Okinawa" target="_blank">↗ Maps</a></div></div>
   </div>
 </div>
 
+<!-- TOKYO / OSAKA -->
 <div class="card">
   <div class="header" onclick="tog('tokyo')">
-    <span>🇯🇵</span>
-    <span class="city-name">Tokyo / Osaka</span>
-    <span class="badge">6 dagen</span>
-    <span class="badge2">Vlucht</span>
+    <span>🇯🇵</span><span class="city-name">Tokyo &amp; Osaka</span>
+    <span class="badge">6 dagen</span><span class="badge2">Vlucht</span>
     <span class="chev" id="c-tokyo">▶</span>
   </div>
   <div class="body" id="tokyo">
-    <div class="act"><div class="act-title">Mario Kart op straat (MariCar)</div><div class="links"><a class="lnk" href="https://maricar.com/en/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.app.goo.gl/3DxXdWkuoHZRKZtb6" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Standbeeld (jouw link)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/4Hr7wmgjmuysgjQQ9" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">TeamLab Borderless / Planets</div><div class="links"><a class="lnk" href="https://www.teamlab.art/e/borderless-tokyo/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.app.goo.gl/UYDfCByBBEgEJzin9" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Dotonbori Osaka bij nacht</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/PBmcGGH27yVQiCqD7" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Akihabara (elektronica / anime)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/nBHR1Z8NzqJLKJhA6" target="_blank">↗ Google Maps</a></div></div>
-    <div class="act"><div class="act-title">Shibuya & Shinjuku nightlife</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/p1ggLW3Bs8WgMxaS8" target="_blank">↗ Shibuya</a><a class="lnk" href="https://maps.app.goo.gl/yKyNiRKCVqmMtZmB7" target="_blank">↗ Shinjuku</a></div></div>
-    <div class="act"><div class="act-title">Depachika (warenhuiskelders)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/qSwm3k3aN1uApf8C8" target="_blank">↗ Isetan Shinjuku</a></div></div>
-    <div class="act"><div class="act-title">Onsen ryokan (Hakone)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/ySwCpqn8v5bKnfFs9" target="_blank">↗ Google Maps</a><a class="lnk" href="https://www.jalan.net/en/japan_hotels_ryokan/area_ky_08/" target="_blank">↗ Ryokan zoeken</a></div></div>
-    <div class="act"><div class="act-title">Shopping: Harajuku & Don Quijote</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/z5dFR8U7m6xmg3PK7" target="_blank">↗ Takeshita Street</a><a class="lnk" href="https://www.google.com/maps/search/don+quijote+tokyo" target="_blank">↗ Don Quijote</a></div></div>
+    <p class="note">Keuze uit één van de twee — activiteiten hieronder apart per stad</p>
+    <div class="city-split">
+      <div class="split-col">
+        <h3><span>🗼</span>Tokyo</h3>
+        <div class="act"><div class="act-title">Street Go-Kart (Street Kart)</div><div class="links"><a class="lnk" href="https://streetkart.com/" target="_blank">↗ Website</a></div></div>
+        <div class="act"><div class="act-title">Standbeeld (jullie link)</div><div class="links"><a class="lnk" href="https://maps.app.goo.gl/4Hr7wmgjmuysgjQQ9" target="_blank">↗ Maps</a></div></div>
+        <div class="act"><div class="act-title">TeamLab Borderless – Azabudai Hills</div><div class="links"><a class="lnk" href="https://www.teamlab.art/e/tokyo/" target="_blank">↗ Tickets</a></div></div>
+        <div class="act"><div class="act-title">TeamLab Planets – Toyosu</div><div class="links"><a class="lnk" href="https://www.teamlab.art/e/planets/" target="_blank">↗ Tickets</a></div></div>
+        <div class="act"><div class="act-title">Akihabara – elektronica &amp; anime</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Akihabara+Tokyo" target="_blank">↗ Maps</a></div></div>
+        <div class="act"><div class="act-title">Shibuya &amp; Shinjuku nightlife</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Shibuya+Crossing+Tokyo" target="_blank">↗ Shibuya</a><a class="lnk" href="https://maps.google.com/?q=Kabukicho+Shinjuku+Tokyo" target="_blank">↗ Shinjuku</a></div></div>
+        <div class="act"><div class="act-title">Depachika (warenhuiskelders)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Isetan+Shinjuku+Tokyo" target="_blank">↗ Isetan</a></div></div>
+        <div class="act"><div class="act-title">Onsen ryokan in Hakone</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Hakone+Japan" target="_blank">↗ Maps</a><a class="lnk" href="https://www.jalan.net/en/japan_hotels_ryokan/area_ky_08/" target="_blank">↗ Ryokans</a></div></div>
+        <div class="act"><div class="act-title">Harajuku &amp; Don Quijote shopping</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Takeshita+Street+Harajuku+Tokyo" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Shimokitazawa – indie wijk, vintage winkels, livemuziek bars</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Shimokitazawa+Tokyo" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Tsukiji buitenmarkt – sushi ontbijt om 6u</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Tsukiji+Outer+Market+Tokyo" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Omoide Yokocho – steegje vol yakitori kraampjes, jaren 50 sfeer</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Omoide+Yokocho+Shinjuku+Tokyo" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Yanaka – oudste wijk van Tokyo, Edo-tijdperk sfeer</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Yanaka+Tokyo" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Tokyo Skytree – hoogste toren van Japan (634m)</div><div class="links"><a class="lnk" href="https://www.tokyo-skytree.jp/en/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Tokyo+Skytree" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Sumo ochtendsessie bijwonen (gratis, vroeg opstaan)</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/sumo+stable+morning+practice+tokyo" target="_blank">↗ Zoeken</a></div></div>
+        <div class="act act"><div class="act-title">Odaiba + teamlab Planets op één dag combineren</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Odaiba+Tokyo" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Robot Restaurant show (kitsch maar hilarisch)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Robot+Restaurant+Shinjuku+Tokyo" target="_blank">↗ Maps</a></div></div>
+      </div>
+      <div class="split-col">
+        <h3><span>🏯</span>Osaka</h3>
+        <div class="act"><div class="act-title">Dotonbori bij nacht</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Dotonbori+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Kuromon Ichiba markt – de "keuken van Osaka", alles vers ter plekke eten</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Kuromon+Ichiba+Market+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Shinsekai – retro jaren 50 wijk, kushikatsu (gefrituurd op stokjes)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Shinsekai+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Spa World – gigantisch onsen complex met bizarre themagebieden</div><div class="links"><a class="lnk" href="https://www.spaworld.co.jp/english/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Spa+World+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Osaka Castle bij nacht (verlicht, veel rustiger dan overdag)</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Osaka+Castle" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Amerika-mura (American Village) – Osaka's hipste buurt, vintage &amp; streetwear</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Amerika+Mura+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Namba &amp; Shinsaibashi nightlife – uitgebreider dan Dotonbori alleen</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Shinsaibashi+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Tsutenkaku Tower – icoon van Shinsekai, uitzichtplatform</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Tsutenkaku+Tower+Osaka" target="_blank">↗ Maps</a><a class="lnk" href="https://www.tsutenkaku.co.jp/en/" target="_blank">↗ Website</a></div></div>
+        <div class="act act"><div class="act-title">Nakazakicho – hipste koffiewijk van Osaka, rustig alternatief</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Nakazakicho+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Takoyaki maken workshop</div><div class="links"><a class="lnk" href="https://www.google.com/maps/search/takoyaki+cooking+class+osaka" target="_blank">↗ Zoeken</a></div></div>
+        <div class="act act"><div class="act-title">Minoo Waterfall – wandeling door herfstbos net buiten Osaka</div><div class="links"><a class="lnk" href="https://maps.google.com/?q=Minoo+Waterfall+Osaka" target="_blank">↗ Maps</a></div></div>
+        <div class="act act"><div class="act-title">Kaiyukan Aquarium – een van de grootste ter wereld, walvishaai</div><div class="links"><a class="lnk" href="https://www.kaiyukan.com/language/eng/" target="_blank">↗ Website</a><a class="lnk" href="https://maps.google.com/?q=Osaka+Aquarium+Kaiyukan" target="_blank">↗ Maps</a></div></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -144,13 +196,9 @@ body { font-family: sans-serif; background: transparent; padding: 8px; }
 function tog(id) {
   var body = document.getElementById(id);
   var chev = document.getElementById('c-' + id);
-  if (body.style.display === 'block') {
-    body.style.display = 'none';
-    chev.style.transform = '';
-  } else {
-    body.style.display = 'block';
-    chev.style.transform = 'rotate(90deg)';
-  }
+  var isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  chev.style.transform = isOpen ? '' : 'rotate(90deg)';
 }
 </script>
 </body>
